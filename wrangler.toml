@@ -15,7 +15,26 @@ upload_source_maps = true
 
 # Smart Placement
 # https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
-# placement = { mode = "smart" }
+placement = { mode = "smart" }
+
+[observability]
+enabled = true
+head_sampling_rate = 1
+redact_query_string = false
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+invocation_logs = true
+persist = true
+
+[observability.traces]
+enabled = true
+head_sampling_rate = 1
+persist = true
+
+[observability.issue_detection]
+enabled = true
 
 # Bindings
 # Bindings allow your Worker to interact with resources on the Cloudflare Developer Platform, including
