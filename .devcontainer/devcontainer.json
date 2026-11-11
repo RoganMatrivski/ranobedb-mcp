@@ -1,0 +1,23 @@
+
+{
+  "name": "Cloudflare Workers - TypeScript",
+
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+
+  "forwardPorts": [8787, 9229],
+
+  "portsAttributes": {
+    "8787": {
+      "label": "Cloudflare Worker",
+      "onAutoForward": "notify"
+    },
+    "9229": {
+      "label": "Worker Debugger"
+    }
+  },
+
+
+  "postCreateCommand": "npm install",
+
+  "remoteUser": "node"
+}
